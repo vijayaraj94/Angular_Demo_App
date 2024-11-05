@@ -1,0 +1,25 @@
+<div class="card m-3">
+  <h5 class="card-header cardTitle">User Dashboard</h5>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr class="theading">
+          <th scope="col">S.No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList; let index = index">
+          <th scope="row">{{index + 1}}</th>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+          <td>{{user.address}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+
+<div class="container" *ngIf="showHeader">
+  <div class="row" >
+    <div class="col-sm-3">
+      <div class="sidebar-slider" >
+        <h4 class="text-center mt-3 sidebar_heading">Side bar</h4>
+        <ul class="nav flex-column text-white w-100">
+          <li class="nav-link">
+            <i class="bx bxs-dashboard"></i>
+            <span class="mx-2"><a routerLink="/dashboard">Dashboard</a></span>
+          </li>
+          <li class="nav-link">
+            <i class="bx bxs-dashboard"></i>
+            <span class="mx-2"><a routerLink="/crud">CRUD Operation</a></span>
+          </li>
+          <li class="nav-link">
+            <i class="bx bx-user-check"></i>
+            <span class="mx-2"><a routerLink="/reactive-form">Reactive Forms</a></span>
+          </li>
+          <li class="nav-link">
+            <i class="bx bx-user-check"></i>
+            <span class="mx-2"><a routerLink="/templatedriven-form">Template Driven Forms</a></span>
+          </li>
+          <li class="nav-link">
+            <i class="bx bx-user-check"></i>
+            <span class="mx-2"><a routerLink="/shopping" target="_blank">Shopping</a></span>
+          </li>
+        </ul>
+        <div class="logoutBtn"><a (click)="logout()">Logout</a></div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet />
+    </div>
+  </div>
+</div>
+<div *ngIf="!showHeader">
+  <router-outlet />
+</div>
